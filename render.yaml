@@ -2,7 +2,7 @@ services:
   - type: web
     runtime: node
     name: bebitofiufiu
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && npm run server
+    buildCommand: cd Backend && npm install
+    startCommand: cd Backend && npm run server
     rootDir: ./Backend
     plan: free
