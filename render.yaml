@@ -1,7 +1,7 @@
 services:
   - type: web
     runtime: node
-    name: my-backend
+    name: bebitofiufiu
     buildCommand: cd backend && npm install
     startCommand: cd backend && npm run server
     rootDir: ./Backend
