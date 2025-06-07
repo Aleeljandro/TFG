@@ -4,5 +4,5 @@ services:
     name: my-backend
     buildCommand: cd backend && npm install
     startCommand: cd backend && npm run server
-    rootDir: backend
+    rootDir: ./Backend
     plan: free
