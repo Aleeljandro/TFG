@@ -8,7 +8,7 @@ import bizumRouter from "./bizum/controllers/bizum-controller.js";
 
 
 const app = express();
-const port = 9090;
+const port = process.env.PORT || 9090;
 
 // Database config, will be move to another module in future
 await mongoose.connect('mongodb://127.0.0.1:27017/tienda_db');
