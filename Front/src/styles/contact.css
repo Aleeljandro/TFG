@@ -1,0 +1,101 @@
+/* ---------- Ajuste superior por header fijo ---------- */
+.contact-section {
+  padding-top: 180px; /* antes era 140px */
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #d1afc3;
+  color: #503448;
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ---------- Contenedor principal ---------- */
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ---------- Títulos ---------- */
+.contact-title {
+  font-size: 2rem;
+  color: #8d3164;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: #6A6A6A;
+  margin-bottom: 40px;
+}
+
+/* ---------- Tarjetas ---------- */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(141, 49, 100, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.emoji-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact-card h4 {
+  font-size: 1.1rem;
+  color: #8d3164;
+  margin-bottom: 6px;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: #503448;
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .contact-section {
+    padding-top: 200px; /* más espacio en móviles */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-grid {
+    gap: 30px;
+  }
+
+  .contact-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    position: static !important;
+  }
+}

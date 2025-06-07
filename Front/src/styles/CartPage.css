@@ -1,0 +1,101 @@
+/* ---------- Ajuste superior por header fijo ---------- */
+.contact-section {
+    padding-top: 140px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f9f4f7;
+    color: #503448;
+    text-align: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  /* ---------- Contenedor principal ---------- */
+  .contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* ---------- Títulos ---------- */
+  .contact-title {
+    font-size: 2rem;
+    color: #8d3164;
+    margin-bottom: 10px;
+  }
+  
+  .contact-subtitle {
+    font-size: 1.1rem;
+    color: #6A6A6A;
+    margin-bottom: 40px;
+  }
+  
+  /* ---------- Tarjetas ---------- */
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .contact-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(141, 49, 100, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .emoji-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-card h4 {
+    font-size: 1.1rem;
+    color: #8d3164;
+    margin-bottom: 6px;
+  }
+  
+  .contact-card p {
+    font-size: 0.95rem;
+    color: #503448;
+    margin: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .cart-page {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .cart-page li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item-image {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .cart-item-details {
+        width: 100%;
+    }
+
+    .remove-item-button {
+        align-self: flex-end;
+    }
+}

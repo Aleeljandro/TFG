@@ -1,0 +1,125 @@
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 30vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.theme-toggle {
+  margin-top: 100px; /* Ajusta según lo necesites */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+body.dark-mode {
+  background-color: #503448 !important;
+  color: white !important;
+}
+
+body.dark-mode .header {
+  background-color:#503448 !important;
+}
+
+body.dark-mode .nav-item {
+  color: white !important;
+}
+
+.footer {
+  height: 50px; /* Ajusta la altura */
+  padding: 10px 0;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  background-color: #222;
+  color: white;
+  text-align: center; /* Asegura que el texto también esté centrado */
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+.nav-list-footer {
+  display: flex;
+  gap: 15px; /* Espaciado entre elementos */
+  list-style: none;
+  padding: 0;
+  margin: 5px 0; /* Ajuste de margen */
+}
+
+.nav-item-footer {
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+#Derechos {
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .cart-page {
+      margin: 20px 10px;
+      padding: 15px;
+  }
+
+  .cart-page li {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .cart-item-image {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .cart-item-details {
+      width: 100%;
+  }
+
+  .remove-item-button {
+      align-self: flex-end;
+  }
+}
+
+main {
+  padding-top: 120px; /* Ajusta si tu header es más alto */
+  box-sizing: border-box;
+}

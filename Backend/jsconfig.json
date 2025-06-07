@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",
+    "target": "es2020",
+    "allowJs": true,
+    "checkJs": true,
+    "moduleResolution": "node"
+  },
+  "include": ["./**/*.js"],
+  "exclude": ["node_modules", "**/node_modules/*"]
+}
