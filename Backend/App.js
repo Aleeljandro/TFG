@@ -5,14 +5,23 @@ import userRouter from "./users/controllers/user-controller.js";
 import productRouter from "./products/Controllers/product-controller.js";
 import bizumRouter from "./bizum/controllers/bizum-controller.js";
 
-
-
 const app = express();
 const port = process.env.PORT || 9090;
 
-// Database config, will be move to another module in future
-await mongoose.connect('mongodb://127.0.0.1:27017/tienda_db');
+// MongoDB Atlas connection using environment variables
+const dbUser = process.env.DB_USER;
+const dbPassword = process.env.DB_PASSWORD;
+const dbName = process.env.DB_NAME;
 
+// Asegurate de reemplazar <tu-cluster> con el nombre real de tu cluster Atlas
+const uri = `mongodb+srv://${dbUser}:${dbPassword}@fiu.vmfee07.mongodb.net/?retryWrites=true&w=majority&appName=Fiu`;
+
+try {
+  await mongoose.connect(uri);
+  console.log("✅ Conectado a MongoDB Atlas");
+} catch (error) {
+  console.error("❌ Error al conectar a Mongo:", error);
+}
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -21,11 +30,12 @@ app.use(express.json());
 app.use('/api/pedidos', pedidoRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
-app.use('/api/bizums', bizumRouter)
+app.use('/api/bizums', bizumRouter);
 
 // Static files serving
-app.use(express.static('build'))
-// Starting to listen
+app.use(express.static('build'));
+
+// Start the server
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Servidor corriendo en puerto ${port}`);
 });

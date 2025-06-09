@@ -3,6 +3,6 @@ services:
     runtime: node
     name: bebitofiufiu
     buildCommand: npm install
-    startCommand: npm run server
+    startCommand: npm run local
     rootDir: ./Backend
     plan: free
